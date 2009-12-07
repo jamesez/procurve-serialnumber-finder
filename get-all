@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for i in 1 2 3 4 5 6; do
+  for j in east west; do
+    if [[ "$i$j" == "2east" ]]; then continue; fi
+    ./get-serial-numbers.rb --wiki --community $1 $i$j.net.lsi.umich.edu
+  done
+done
